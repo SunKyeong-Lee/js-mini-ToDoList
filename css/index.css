@@ -1,0 +1,102 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 80%;
+  min-height: 640px;
+  padding: 20px 30px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  color: #193140;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 입력창, 버튼 */
+#login_form,
+#todo_form {
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+}
+input[type="text"] {
+  width: 80%;
+  border: none;
+}
+input[type="submit"],
+input[type="button"] {
+  background-color: #193140;
+  color: #f2f2f2;
+  border: none;
+  width: 20%;
+}
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #193140 inset;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  cursor: pointer;
+}
+
+/* 오늘 날짜, 현재 시간 */
+.wrap {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#clock {
+  font-size: 2em;
+}
+
+/* todoboard */
+#todo_board {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+#todo_board li {
+  padding: 10px 0;
+  border-bottom: 1px dashed rgb(25, 49, 64, 0.4);
+  display: flex;
+}
+#todo_board li input {
+  margin-right: 20px;
+}
+#todo_board li button {
+  margin-left: auto;
+  border: none;
+}
+#todo_board li button:hover {
+  color: tomato;
+  cursor: pointer;
+}
+#todo_board .unchecked {
+  color: #193140;
+}
+#todo_board .checked {
+  color: #b8b8b8;
+}
+
+/* 오늘 완료한 일 */
+#done {
+  width: 100%;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #b8b8b8;
+}
+#done p {
+  padding: 10px 30px;
+}
