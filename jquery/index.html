@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 로그인 -->
+      <div id="login_container">
+        <h1>To-Do List</h1>
+        <form id="login_form">
+          <input type="text" id="name" placeholder="이름을 입력하세요"/>
+          <input type="submit" value="로그인" />
+        </form>
+      </div>
+      <!-- 로그인 후 보여지게 -->
+      <div id="todo_container" class="hidden">
+        <h1 id="title">ㅇㅇㅇ님 환영합니다</h1>
+        <!-- 오늘 날짜 / 현재 시각 -->
+        <div class="wrap">
+          <div id="today">
+            <span>0000/00/00</span>
+            <span>Monday</span>
+          </div>
+          <div id="clock">
+            <p>00 : 00 : 00</p>
+          </div>
+        </div>
+
+        <!-- todo 입력 공간 -->
+        <form id="todo_form">
+          <input type="text" id="todo" placeholder="할 일을 입력하세요"/>
+          <input type="button" value="+" />
+        </form>
+
+        <!-- todo 보드 출력 공간 -->
+        <ul id="todo_board">
+          <!--
+            <li>
+              <input type="checkbox" id="check"> 
+              할 일
+              <input type="button">
+            </li>
+          -->
+        </ul>
+        <div id="done">
+          <p>오늘 완료한 할 일 : 0개</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 자바스크립트 -->
+    <script src="../js/clock.js"></script>
+    <script src="../js/today.js"></script>
+    <!-- 제이쿼리 문법으로 수정해보기 -->
+    <script src="./login.js"></script>
+    <script src="./todolist.js"></script>
+  </body>
+</html>
